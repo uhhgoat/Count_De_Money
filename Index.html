@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<!--Matyas Fenyves-->
+<html>
+	<head>
+		<script type="text/javascript">
+			penny = 0.00 ;
+			nickel = 0.00 ;
+			dime = 0.00 ;
+			quarter = 0.00 ;
+			money = 0.00 ;
+			function display()
+			{
+			myElement = document.getElementById ("penny") ;
+			myElement.innerHTML = penny ;
+			myElement = document.getElementById ("nickel") ;
+			myElement.innerHTML = nickel ;
+			myElement = document.getElementById ("dime") ;
+			myElement.innerHTML = dime ;
+			myElement = document.getElementById ("quarter") ;
+			myElement.innerHTML = quarter ;
+			myElement = document.getElementById ("money") ;
+			myElement.innerHTML = money ;
+			}
+		</script>
+		<title>Count De Money</title>
+		<style type="text/css">
+			body { text-align:center ; font-family:Lucida Console ; }
+			table { text-align:center ; width:30% ; margin-right:35% ; margin-left:35% ; }
+			td { border: solid #336600 thick ; background-color:#33CC33 ; cursor:pointer ; font-size:18pt ; }
+			h1 { font-size:50pt ; color:#003300 ; margin-left:25% ; margin-right:25% ; }
+			div>img { z-index:-1 ; position:fixed ; top:0px ; left:0px ; height:100% ; width:100% ; }
+			h5 { border: thick dotted green ; background-color:#00CC66 ; font: 30pt bold ; margin-right:28% ; margin-left:28% ; text-align:left ; }
+			h6 { font-size:30pt ; }
+			h4 { display:inline-block ; width:10% ; font-size:15pt ; font-weight:bold ; }
+			h1+img { width:30% ; opacity:.7 ; }
+			h5>span { font: 30pt bold ; }
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="money.jpg" />
+		</div>
+		<h1>COUNT DE MONEY</h1>
+		<img src="coins.jpg" />
+		<table>
+			<tr>
+				<td onclick = "penny++ ; money = money + 0.01 ; display() ;">Add<br />Penny</td>
+				<td onclick = "nickel++ ; money = money + 0.05 ; display() ;">Add<br />Nickel</td>
+				<td onclick = "dime++ ; money = money + 0.10 ; display() ;">Add<br />Dime</td>
+				<td onclick = "quarter++ ; money = money + 0.25 ; display() ;">Add<br />Quarter</td>
+			</tr>
+			<tr>
+				<td onclick = "penny-- ; money = money - 0.01 ; display() ;">Take Away<br />Penny</td>
+				<td onclick = "nickel-- ; money = money - 0.05 ; display() ;">Take Away<br />Nickel</td>
+				<td onclick = "dime-- ; money = money - 0.10 ; display() ;">Take Away<br />Dime</td>
+				<td onclick = "quarter-- ; money = money - 0.25 ; display() ;">Take Away<br />Quarter</td>
+			</tr>
+			<tr>
+				<td onclick = "penny+=5 ; money = money + 0.05 ; display() ;">Add<br />5 Pennies</td>
+				<td onclick = "nickel+=5 ; money = money + 0.25 ; display() ;">Add<br />5 Nickels</td>
+				<td onclick = "dime+=5 ; money = money + 0.50 ; display() ;">Add<br />5 Dimes</td>
+				<td onclick = "quarter+=5 ; money = money + 1.25 ; display() ;">Add<br />5 Quarters</td>
+			</tr>
+			<tr>
+				<td onclick = "penny-=5 ; money = money - 0.05 ; display() ;">Take Away<br />5 Pennies</td>
+				<td onclick = "nickel-=5 ; money = money - 0.25 ; display() ;">Take Away<br />5 Nickels</td>
+				<td onclick = "dime-=5 ; money = money - 0.50 ; display() ;">Take Away<br />5 Dimes</td>
+				<td onclick = "quarter-=5 ; money = money - 1.25 ; display() ;">Take Away<br />5 Quarters</td>
+			</tr>
+		</table>
+		<br /><br /><br /><br /><br />
+		<h4>
+			<span id = "penny"></span> pennies
+		</h4>
+		<h4>
+			<span id = "nickel"></span> nickels
+		</h4>
+		<h4>
+			<span id = "dime"></span> dimes
+		</h4>
+		<h4>
+			<span id = "quarter"></span> quarters
+		</h4>
+		<br /><br /><br />
+		<img src="DrEvil.jpg" /><br />
+		<h5>
+			TOTAL MONEY COUNTED: $<span id="money"></span>
+		</h5>
+		<script type="text/javascript">
+			display () ;
+		</script>
+	</body>
+</html>
